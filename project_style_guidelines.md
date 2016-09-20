@@ -27,7 +27,48 @@ The structure of the project should remain as defined above whenever you are mod
 
 Using this structure allows us to keep the application code seperated from any test-related code. The CommonTest directory allows us to share classes between the functional and unit tests, such as mock model creation and dagger test configuration classes.
 
+### 1.2 Project Packaging
 
+When organising java class into packages, prefer organising by features or services than by class type.
+
+Do :
+
+  	features
+  		AppApplication
+  		feature1
+  			Activity1
+  			Fragment1
+  			Adapter1
+  		feature2
+  			Activity2
+  			Fragment2
+  			Adapter2
+  	utils
+  		CameraUtils
+  	architecture
+  		AppAbstractFragment
+  		AppAbstractActivity
+		AppAbstractApplication
+		
+Try Avoid :
+
+  	activity
+ 		Activity1
+		Activity2
+  		AppAbstractActivity
+	fragments
+		AppAbstractFragment
+		Fragment1
+		Fragment2
+	adpaters
+		Adapter1
+  		Adapter2
+  	utils
+  		CameraUtils
+  	application
+  		AppApplication
+		AppAbstractApplication
+	
 ### 1.2 File Naming
 
 #### 1.2.1 Class Files
